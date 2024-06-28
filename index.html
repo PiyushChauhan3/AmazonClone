@@ -260,7 +260,26 @@
         </div>
     </footer>
     <script>
-        
+        <script>
+        document.getElementById('search-icon').addEventListener('click', function() {
+            let searchInput = document.getElementById('search-input').value;
+            alert('Searching for: ' + searchInput);
+        });
+
+        document.getElementById('back-to-top').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        document.getElementById('menu-all').addEventListener('click', function() {
+            let dropdownMenu = document.getElementById('dropdown-menu');
+            if (dropdownMenu.style.display === 'none' || dropdownMenu.style.display === '') {
+                dropdownMenu.style.display = 'block';
+            } else {
+                dropdownMenu.style.display = 'none';
+            }
+        });
+    </script>
     </script>
 </body>
 </html>
